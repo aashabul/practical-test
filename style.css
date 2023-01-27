@@ -1,0 +1,159 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap");
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Poppins", sans-serif;
+}
+
+header {
+    text-align: center;
+    margin: 2rem 0;
+}
+
+.container {
+    border: 1px solid #adb5bd;
+    border-radius: 0.5rem;
+    width: 98%;
+    margin: auto;
+    padding: 1rem;
+}
+
+.wrapper {
+    overflow-x: scroll;
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    gap: 1rem;
+    height: 80vh;
+}
+
+.box {
+    display: flex;
+    flex-direction: column;
+    row-gap: 2rem;
+    width: 400px;
+    background-color: #f2f4f7;
+    border-radius: 0.5rem;
+    padding: 1rem;
+    overflow-y: scroll;
+}
+
+.box .title {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.box .title div {
+    display: flex;
+    align-items: center;
+    column-gap: 0.5rem;
+}
+
+.box .title img {
+    width: 30px;
+    height: 30px;
+}
+
+.box .title p {
+    background-color: #e8eef3;
+    padding: 0.1rem 0.5rem;
+    border-radius: 0.5rem;
+}
+
+.card {
+    background-color: #ffffff;
+    display: flex;
+    flex-direction: column;
+    row-gap: 1.5rem;
+    padding: 1rem;
+    border-radius: 0.5rem;
+}
+
+.names,
+.names div {
+    display: flex;
+}
+
+.names {
+    justify-content: space-between;
+    color: #2f3e46;
+}
+
+.names div {
+    align-items: center;
+    column-gap: 0.5rem;
+}
+
+.names img {
+    width: 30px;
+    border-radius: 2rem;
+}
+
+.description,
+.description div {
+    display: flex;
+}
+
+.description {
+    justify-content: space-between;
+}
+
+.description div {
+    align-items: center;
+    column-gap: 0.5rem;
+}
+
+.description div:last-child {
+    background-color: #e8eef3;
+    padding: 0.2rem 0.4rem;
+    border-radius: 0.2rem;
+}
+
+.description p {
+    font-size: 0.8rem;
+}
+
+.description img {
+    width: 16px;
+    height: 16px;
+}
+
+.info {
+    display: flex;
+    justify-content: space-between;
+}
+
+.info div {
+    display: flex;
+    align-items: center;
+    column-gap: 0.5rem;
+}
+
+.info div p:first-child {
+    background-color: #e8eef3;
+    padding: 0.4rem;
+    border-radius: 2rem;
+}
+
+.info p {
+    font-weight: 700;
+    font-size: 0.8rem;
+    color: #2f3e46;
+}
+
+.info img {
+    width: 30px;
+    height: 30px;
+    border-radius: 2rem;
+}
+
+.info div img {
+    border-radius: unset;
+    width: 16px;
+    height: 16px;
+}
