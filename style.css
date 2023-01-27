@@ -1,5 +1,7 @@
+/* exporting google fonts (poppins) */
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap");
 
+/* getting rid from the default styles */
 * {
     margin: 0;
     padding: 0;
@@ -21,6 +23,7 @@ header {
     width: 98%;
     margin: auto;
     padding: 1rem;
+    z-index: 1;
 }
 
 .wrapper {
@@ -156,4 +159,64 @@ header {
     border-radius: unset;
     width: 16px;
     height: 16px;
+}
+
+.clickable {
+    cursor: pointer;
+}
+
+/* Modal styles */
+#modal {
+    background-color: yellow;
+    width: 70%;
+    z-index: 1000;
+    position: absolute;
+    top: 15%;
+    left: 15%;
+    border-radius: 1rem;
+}
+
+.modal-container {
+    width: 80%;
+    margin: auto;
+    padding: 2rem;
+}
+
+#modal .header img {
+    width: 20px;
+    height: 20px;
+    cursor: pointer;
+}
+
+#modal .header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.files ul {
+    list-style: none;
+    margin-top: 1rem;
+}
+
+.files ul li {
+    border-bottom: 1px solid gray;
+    padding: 0.5rem 0;
+}
+
+#overlay {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(3px);
+    z-index: 1;
+}
+
+.hidden {
+    display: none;
 }

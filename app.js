@@ -1,11 +1,14 @@
+//selects all the elemets which contain box class
 const box = document.querySelectorAll(".box");
 
+//inserting card element throught iteration instead of manually writing elements
 box.forEach((item) => {
   for (let i = 0; i < 8; i++) {
     let div = document.createElement("div");
     div.classList.add("card");
+
+    // card element
     div.innerHTML = `
-    
         <div class="names">
             <div>
                 <img src="./img/client.jpg" alt="client-photo" />
@@ -50,4 +53,40 @@ box.forEach((item) => {
   `;
     item.appendChild(div);
   }
+});
+
+//selects the wrapper class
+const wrapper = document.querySelector(".wrapper");
+
+//selects the attachment icon
+const attachment_icon =
+  wrapper.children[0].children[1].children[2].children[4].firstElementChild;
+attachment_icon.classList.add("clickable");
+
+//selects attached item quantity
+const value =
+  wrapper.children[0].children[1].children[2].children[4].lastElementChild;
+
+value.innerHTML = "0";
+
+//selects the modal element
+const modal = document.getElementById("modal");
+
+//selects the overlay element
+const overlay = document.getElementById("overlay");
+
+//selects the close icon
+const close_icon = document.getElementById("close");
+
+//function to execute when attachment icon is clicked
+attachment_icon.addEventListener("click", () => {
+  console.log("haha");
+  modal.classList.remove("hidden");
+  overlay.classList.remove("hidden");
+});
+
+//function to execute when the close icon is clicked in modal
+close_icon.addEventListener("click", () => {
+  modal.classList.add("hidden");
+  overlay.classList.add("hidden");
 });
