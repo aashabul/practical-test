@@ -167,7 +167,7 @@ header {
 
 /* Modal styles */
 #modal {
-    background-color: yellow;
+    background-color: #ffffff;
     width: 70%;
     z-index: 1000;
     position: absolute;

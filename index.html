@@ -81,10 +81,10 @@
       <div id="modal" class="hidden">
         <div class="modal-container">
           <div class="header">
-            <h3>Uploaded Files</h3>
+            <h3>Upload Files</h3>
             <img id="close" src="./img/close-icon.png" alt="close-icon" />
           </div>
-          <div class="files">
+          <!-- <div class="files">
             <ul>
               <li>file1</li>
               <li>file1</li>
@@ -92,7 +92,11 @@
               <li>file1</li>
               <li>file1</li>
             </ul>
-          </div>
+          </div> -->
+          <form id="form" enctype="multipart/form-data">
+            <input id="files" type="file" multiple />
+            <button id="upload" type="submit">Upload</button>
+          </form>
         </div>
       </div>
 

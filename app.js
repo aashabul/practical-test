@@ -80,7 +80,6 @@ const close_icon = document.getElementById("close");
 
 //function to execute when attachment icon is clicked
 attachment_icon.addEventListener("click", () => {
-  console.log("haha");
   modal.classList.remove("hidden");
   overlay.classList.remove("hidden");
 });
@@ -89,4 +88,24 @@ attachment_icon.addEventListener("click", () => {
 close_icon.addEventListener("click", () => {
   modal.classList.add("hidden");
   overlay.classList.add("hidden");
+});
+
+const upload = document.getElementById("upload");
+const files = document.getElementById("files");
+
+upload.addEventListener("click", (e) => {
+  e.preventDefault();
+  const formData = new FormData();
+  for (let i = 0; i < files.files.length; i++) {
+    formData.append("files", files.files[i]);
+  }
+  fetch("http://localhost:5000/upload_files", {
+    method: "POST",
+    body: formData,
+    headers: {
+      // "Content-Type": "multipart/form-data",
+    },
+  })
+    .then((res) => console.log(res))
+    .catch((err) => ("Error occured", err));
 });
